@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActionDisableAct : Action
+public class ActionDisable : Action
 {
     public float disableDelay = 0.3f;
     public float respawnDelay = 5f;

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Moving : MonoBehaviour
 {
-    public Rigidbody _rigidbody;
+    public PlayerCtrl playerCtrl;
     public float jumpHeight = 0f;
     public float jumpSpeed = 0.15f;
     public float jumpMax = 0.2f;
@@ -10,8 +10,7 @@ public class Moving : MonoBehaviour
 
     private void Start()
     {
-        //Fetch the Rigidbody from the GameObject with this script attached
-        this._rigidbody = transform.parent.GetComponent<Rigidbody>();
+        this.playerCtrl = transform.parent.GetComponent<PlayerCtrl>();
     }
 
     protected void Update()
@@ -29,7 +28,7 @@ public class Moving : MonoBehaviour
         float x = InputManager.instance.vertical;
         float z = -1 * InputManager.instance.horizontal;
         Vector3 direction = new Vector3(x, this.jumpHeight, z);
-        this._rigidbody.AddForce(direction * this.thrust);
+        this.playerCtrl._rigidbody.AddForce(direction * this.thrust);
     }
 
     protected virtual void Jumping()
