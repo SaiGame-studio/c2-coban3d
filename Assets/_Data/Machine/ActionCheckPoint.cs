@@ -19,7 +19,6 @@ public class ActionCheckPoint : Action
 
     protected virtual void SaveCheckPoint()
     {
-        Debug.Log(transform.name + ": SaveCheckPoint");
         CheckPointManager.instance.SetCheckPoint(this.machine);
     }
 }
