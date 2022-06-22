@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class MoveByPoints : MonoBehaviour
 {
+    [Header("Points")]
     public float speed = 1f;
     public int pointIndex = 0;
     public float pointDistance = Mathf.Infinity;
