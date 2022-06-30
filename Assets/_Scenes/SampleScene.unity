@@ -5277,6 +5277,7 @@ GameObject:
   - component: {fileID: 1244132104}
   - component: {fileID: 1244132103}
   - component: {fileID: 1244132106}
+  - component: {fileID: 1244132107}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -5363,6 +5364,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   offet: {x: -5, y: 5, z: 0}
+  mouseZ: 1
+  pointingTarget: {x: 0, y: 0, z: 0}
+--- !u!114 &1244132107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244132102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eac7877754460c4b919f0348a764d58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseSensitivity: 100
+  clampAngle: 80
+  rotY: 0
+  rotX: 0
 --- !u!1 &1247087148
 GameObject:
   m_ObjectHideFlags: 0
@@ -6659,10 +6678,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1725781443}
+  - component: {fileID: 1725781444}
   - component: {fileID: 1725781442}
   - component: {fileID: 1725781441}
   - component: {fileID: 1725781440}
-  - component: {fileID: 1725781444}
   - component: {fileID: 1725781439}
   m_Layer: 0
   m_Name: Player
@@ -6867,7 +6886,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752752384}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.5, y: 14, z: -20}
+  m_LocalPosition: {x: -16.5, y: 14, z: -21}
   m_LocalScale: {x: 3, y: 2, z: 3}
   m_Children:
   - {fileID: 565336792}

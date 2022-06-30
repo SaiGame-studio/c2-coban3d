@@ -21,6 +21,12 @@ public class FollowPlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //this.LookAtPlayer();
+        //this.LookByMouse();
+    }
+
+    protected virtual void LookAtPlayer()
+    {
         transform.LookAt(this.player.position);
     }
 }
