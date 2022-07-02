@@ -25,6 +25,8 @@ public class Moving : MonoBehaviour
 
     protected virtual void MoveByRigibody()
     {
+        if (GameManager.instance.gameOver) return;
+
         float x = InputManager.instance.vertical;
         float z = -1 * InputManager.instance.horizontal;
         Vector3 direction = new Vector3(x, this.jumpHeight, z);
@@ -33,6 +35,7 @@ public class Moving : MonoBehaviour
 
     protected virtual void Jumping()
     {
+        if (GameManager.instance.gameOver) return;
         if (InputManager.instance.jump == 0) return;
         this.jumpHeight += this.jumpSpeed;
         Invoke("ResetJump", this.jumpMax);
